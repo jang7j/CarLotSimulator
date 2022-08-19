@@ -12,6 +12,15 @@ namespace CarLotSimulator
         Model = model;
         Year = year;
     }
+
+    
+}
+
+
+//Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
+//Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
+//The methods should take one string parameter: the respective noise property
+
         public int Year { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
@@ -23,12 +32,14 @@ namespace CarLotSimulator
         {
             Console.WriteLine($"My car's engine sounds like {noise}");
         }
-        public void MakeHonkNoise()
+        public void MakeHonkNoise(string honk)
         {
-            Console.WriteLine($"My car's honk sounds like {HonkNoise}");
+            Console.WriteLine($"My car's honk sounds like {honk}");
         }
-
 
     }
 
 }
+
+
+
