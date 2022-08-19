@@ -26,29 +26,28 @@ namespace CarLotSimulator
             //1) Dot notation
             car1.Make = "Honda"; 
             car1.Model = "Accord";
-            car1.Year = 2009; "
-            car1.EngineNoise = true;
-            car1.HonkNoise = true;
+            car1.Year = 2009; 
+            car1.EngineNoise = "Vroom";
+            car1.HonkNoise = "Beep";
             car1.isDriveable = true;
 
             //name of collection, dot add, pass in the car
-            carlot.CarList.Add(car1);
-            car1.Make
+            Carlot.CarList.Add(car1);
                  
             //2) Object initializer syntax
                     
             var car2 = new Car() { 
                 Make = "VW", 
                 Model = "Beetle", 
-                EngineNoise = "Beep", 
-                HonkNoise = "Honk", 
+                EngineNoise = "Vroom", 
+                HonkNoise = "Beep", 
                 isDriveable = true };
             //SAME AS: var instance2 = new Car() { Make = "VW", Model = "Beetle", EngineNoise = "Beep", HonkNoise = "Honk", isDriveable = true };
-            carlot.CarList.Add(instance2);
+            Carlot.CarList.Add(car2);
 
             //3) Custom constructor - First, go back to the class Car & set the parameters & assign properties with those parameters: Make = make; Model = model; Year = year;
             var car3 = new Car("Jeep", "Wrangler", 2022);
-            carlot.CarList.Add(car3);
+            Carlot.CarList.Add(car3);
 
 
             //*************BONUS*************//
@@ -61,13 +60,13 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-            foreach (var item in carlot.CarList)
+            foreach (var item in Carlot.CarList)
             {
                 Console.WriteLine(item.Year);
                 Console.WriteLine(item.Make);
                 Console.WriteLine(item.Model);
                 item.MakeEngineNoise("Vroom");
-                item.MakeHonkNoise("honk");
+                item.MakeHonkNoise("Beep");
             }
 
            
