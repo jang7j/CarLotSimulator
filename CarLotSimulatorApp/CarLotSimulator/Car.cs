@@ -8,7 +8,7 @@ namespace CarLotSimulator
     {
         public Car() //default constructor
         {
-
+            CarLot.numberOfCars++; //field that increments the number of cars
         }
 
         public Car(string make, string model, int year) //parameterized constructor

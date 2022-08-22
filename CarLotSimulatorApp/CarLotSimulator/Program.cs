@@ -31,6 +31,9 @@ namespace CarLotSimulator
             car1.HonkNoise = "Beep";
             car1.isDriveable = true;
 
+            //static field that prints out the number of cars:  number is incremented when in our program we create a new Car.
+            CarLot.numberOfCars++;
+
             //name of collection, dot add, pass in the car
             Carlot.CarList.Add(car1);
                  
@@ -45,11 +48,13 @@ namespace CarLotSimulator
             //SAME AS: var instance2 = new Car() { Make = "VW", Model = "Beetle", EngineNoise = "Beep", HonkNoise = "Honk", isDriveable = true };
             Carlot.CarList.Add(car2);
 
+            Console.WriteLine(CarLot.numberOfCars); //you can write the field this way
+
             //3) Custom constructor - First, go back to the class Car & set the parameters & assign properties with those parameters: Make = make; Model = model; Year = year;
             var car3 = new Car("Jeep", "Wrangler", 2022);
             Carlot.CarList.Add(car3);
 
-
+           
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
